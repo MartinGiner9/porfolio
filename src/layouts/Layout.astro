@@ -29,14 +29,35 @@ import '../styles/app.css';
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/MartinGiner.webp', Astro.site)} />
+    <meta property="og:image" content={new URL('//MartinGiner_4-2.png', Astro.site)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('/MartinGiner.webp', Astro.site)} />
+    <meta property="twitter:image" content={new URL('/MartinGiner_4-2.png', Astro.site)} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Martín Giner Navarro",
+      "url": Astro.site,
+      "image": new URL('/MartinGiner_4-2.png', Astro.site),
+      "sameAs": [
+        "https://github.com/MartinGiner9",
+        "https://www.linkedin.com/in/martin-giner-navarro/" 
+      ],
+      "jobTitle": "Desarrollador Fullstack",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tragsatec"
+      },
+      "description": description
+    })} />
+
+    <meta name="theme-color" content="#0f172a" />
 
     <!-- Tema inicial: aplicar antes de render para evitar FOUC -->
     <script>
