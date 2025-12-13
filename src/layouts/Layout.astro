@@ -52,7 +52,7 @@ import '../styles/app.css';
 
 
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Martín Giner Navarro",
@@ -62,19 +62,15 @@ import '../styles/app.css';
         "https://github.com/MartinGiner9",
         "https://www.linkedin.com/in/martin-giner-navarro/"
       ],
-      "worksFor": {
-            "@type": "Organization",
-            "name": "Tragsatec"
-      },
-      "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Murcia",
-            "addressCountry": "ES"
-      },
       "jobTitle": "Desarrollador Fullstack",
       "worksFor": {
         "@type": "Organization",
         "name": "Tragsatec"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Murcia",
+        "addressCountry": "ES"
       },
       "description": description
     })} />
