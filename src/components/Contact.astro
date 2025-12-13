@@ -70,7 +70,33 @@ import MapPinIcon from './icons/MapPin.astro';
 
         <!-- Contact Form -->
         <div class="animate-slide-in-right">
-          <form id="contact-form" class="glass-card p-8 rounded-2xl space-y-6" method="post">
+          <!-- Disabled Notice -->
+          <div class="glass-card p-6 rounded-2xl mb-6 border-2 border-yellow-500/50 bg-yellow-500/10">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="text-lg font-bold text-yellow-500 mb-2">Formulario Temporalmente Desactivado</h4>
+                <p class="text-sm text-muted-foreground mb-3">
+                  El formulario de contacto está actualmente deshabilitado. Por favor, contáctame directamente a través de mi correo electrónico.
+                </p>
+                <a 
+                  href="mailto:martinginernavarro7@gmail.com"
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm font-medium"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Enviar Email
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="glass-card p-8 rounded-2xl space-y-6 opacity-50 pointer-events-none" method="post">
             <!-- Honeypot field: keep it hidden from users, bots tend to fill it -->
             <label for="_honey" class="sr-only">If you are a human, leave this field empty</label>
             <input
