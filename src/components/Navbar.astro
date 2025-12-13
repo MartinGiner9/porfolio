@@ -160,7 +160,7 @@ import MenuIcon from './icons/Menu.astro';
 
     let isMenuOpen = false;
 
-    function setScrolled(scrolled) {
+    function setScrolled(scrolled: boolean) {
       // toggle a compact class instead of manipulating many classes
       navbar.classList.toggle('navbar--compact', scrolled);
     }
@@ -172,7 +172,7 @@ import MenuIcon from './icons/Menu.astro';
     window.addEventListener('scroll', onScroll);
     onScroll();
 
-    function scrollToHref(href) {
+    function scrollToHref(href: string | null) {
       if (!href) return;
       const el = document.querySelector(href);
       el && el.scrollIntoView({ behavior: 'smooth' });
