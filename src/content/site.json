@@ -2,17 +2,28 @@
   "siteTitle": "Martín Giner",
   "description": "Desarrollador Full Stack creando experiencias web excepcionales con tecnologías modernas.",
   "links": [
-    { "label": "Inicio", "href": "#hero" },
-    { "label": "Sobre mí", "href": "#about" },
-    { "label": "Proyectos", "href": "#projects" },
-    { "label": "Contacto", "href": "#contact" }
+    {
+      "label": "Inicio",
+      "href": "#hero"
+    },
+    {
+      "label": "Sobre mí",
+      "href": "#about"
+    },
+    {
+      "label": "Proyectos",
+      "href": "#projects"
+    },
+    {
+      "label": "Contacto",
+      "href": "#contact"
+    }
   ],
   "social": {
     "github": "https://github.com/MartinGiner9",
     "linkedin": "https://es.linkedin.com/in/martin-giner-navarro",
     "email": "martinginernavarro7@gmail.com"
   },
-
   "about": {
     "title": "Sobre Mí",
     "intro": [
@@ -41,7 +52,6 @@
       }
     ]
   },
-
   "experiences": [
     {
       "company": "Tragsatec",
@@ -73,7 +83,6 @@
         }
       ]
     },
-
     {
       "company": "Minderest",
       "logo": "",
@@ -94,7 +103,6 @@
         }
       ]
     },
-
     {
       "type": "education",
       "title": "Grado en Ciencia de Datos Aplicada (Applied Data Science)",
@@ -103,7 +111,6 @@
       "description": "Estudios de grado en Ciencia de Datos Aplicada enfocados en técnicas de análisis, machine learning y visualización de datos.",
       "achievements": []
     },
-
     {
       "type": "education",
       "title": "Ciclo Formativo de Grado Superior — Desarrollo de aplicaciones web (bilingüe)",
@@ -114,38 +121,71 @@
       "description": "Formación profesional en desarrollo de aplicaciones web. Tecnologías y lenguajes estudiados: JavaScript y PHP."
     }
   ],
-
   "projects": [
     {
       "slug": "portfolio",
       "title": "Portfolio Personal",
       "description": "Portfolio profesional desarrollado con Astro y Tailwind CSS",
-      "technologies": ["Astro", "Tailwind CSS", "TypeScript"],
+      "technologies": [
+        "Astro",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
       "image": "/proyectos/portfolio.webp",
       "github": "https://github.com/MartinGiner9/portfolio",
       "demo": "https://martinginer.vercel.app",
       "order": 1
     },
     {
+      "slug": "restforge",
+      "title": "RestForge",
+      "description": "Kit de infraestructura para forjar CRUD REST en Spring Boot: DTOs, mappers, errores y paginación",
+      "technologies": [
+        "Spring Boot",
+        "Java 21",
+        "MapStruct",
+        "Maven"
+      ],
+      "image": "/proyectos/restforge.webp",
+      "github": "https://github.com/MartinGiner9/RestForge",
+      "order": 2
+    },
+    {
       "slug": "ecommerce",
       "title": "Gestor reservas restaurante",
       "description": "Plataforma de reserva de mesa y pasarela de pago para restaurante, gestionada por turnos",
       "image": "/proyectos/proyectoHosteleria.webp",
-      "technologies": ["Angular", "TypeScript", "Tailwind CSS", "Symfony"],
-      "order": 2
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "Tailwind CSS",
+        "Symfony"
+      ],
+      "order": 3
     }
   ],
-
   "skillCategories": [
     {
       "icon": "layout",
       "title": "Frontend",
       "colorClass": "text-primary",
       "skills": [
-        { "name": "Angular", "level": 90 },
-        { "name": "TypeScript", "level": 90 },
-        { "name": "Tailwind CSS", "level": 95 },
-        { "name": "HTML/CSS", "level": 98 }
+        {
+          "name": "Angular",
+          "level": 90
+        },
+        {
+          "name": "TypeScript",
+          "level": 90
+        },
+        {
+          "name": "Tailwind CSS",
+          "level": 95
+        },
+        {
+          "name": "HTML/CSS",
+          "level": 98
+        }
       ]
     },
     {
@@ -153,10 +193,22 @@
       "title": "Backend",
       "colorClass": "text-secondary",
       "skills": [
-        { "name": "Spring boot", "level": 95 },
-        { "name": "Symfony", "level": 85 },
-        { "name": "REST APIs", "level": 92 },
-        { "name": "Microservicios", "level": 85 }
+        {
+          "name": "Spring boot",
+          "level": 95
+        },
+        {
+          "name": "Symfony",
+          "level": 85
+        },
+        {
+          "name": "REST APIs",
+          "level": 92
+        },
+        {
+          "name": "Microservicios",
+          "level": 85
+        }
       ]
     },
     {
@@ -164,9 +216,18 @@
       "title": "Database",
       "colorClass": "text-accent",
       "skills": [
-        { "name": "Oracle", "level": 88 },
-        { "name": "MySql", "level": 90 },
-        { "name": "Redis", "level": 50 }
+        {
+          "name": "Oracle",
+          "level": 88
+        },
+        {
+          "name": "MySql",
+          "level": 90
+        },
+        {
+          "name": "Redis",
+          "level": 50
+        }
       ]
     },
     {
@@ -174,9 +235,18 @@
       "title": "DevOps & Tools",
       "colorClass": "text-tech-purple",
       "skills": [
-        { "name": "Git / GitHub", "level": 95 },
-        { "name": "Docker", "level": 85 },
-        { "name": "CI/CD", "level": 82 }
+        {
+          "name": "Git / GitHub",
+          "level": 95
+        },
+        {
+          "name": "Docker",
+          "level": 85
+        },
+        {
+          "name": "CI/CD",
+          "level": 82
+        }
       ]
     }
   ]

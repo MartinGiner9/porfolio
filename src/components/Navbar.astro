@@ -7,6 +7,8 @@ import MenuIcon from './icons/Menu.astro';
 <nav
   id="site-navbar"
   class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-3 md:py-6"
+  role="navigation"
+  aria-label="Navegación principal"
 >
   <div class="container mx-auto px-4 flex items-center justify-between">
     <div class="flex items-center gap-2 text-primary font-bold text-xl">
@@ -15,11 +17,13 @@ import MenuIcon from './icons/Menu.astro';
     </div>
 
     <!-- Desktop Menu -->
-    <ul id="navbar-desktop" class="hidden md:flex items-center gap-8">
-      <li>
+    <ul id="navbar-desktop" class="hidden md:flex items-center gap-8" role="menubar" aria-label="Menú de navegación">
+      <li role="none">
         <button
           data-href="#hero"
           class="nav-link text-foreground hover:text-primary transition-colors relative group"
+          role="menuitem"
+          aria-label="Ir a la sección inicio"
           >Inicio<span class="underline"></span></button
         >
       </li>
@@ -65,6 +69,7 @@ import MenuIcon from './icons/Menu.astro';
       <button
         id="contact-desktop"
         class="bg-primary text-primary-foreground hover:bg-primary/90 glow-border px-4 py-2 rounded-md"
+        aria-label="Ir a la sección de contacto"
         >Contáctame</button
       >
     </div>
@@ -72,7 +77,13 @@ import MenuIcon from './icons/Menu.astro';
     <!-- Mobile Menu Button -->
     <div class="md:hidden flex items-center gap-2">
       <ThemeToggle />
-      <button id="mobile-toggle" class="text-foreground p-2 rounded-md">
+      <button
+        id="mobile-toggle"
+        class="text-foreground p-2 rounded-md"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
         <MenuIcon id="mobile-menu-icon" class="w-6 h-6" />
       </button>
     </div>
@@ -149,7 +160,7 @@ import MenuIcon from './icons/Menu.astro';
 
     let isMenuOpen = false;
 
-    function setScrolled(scrolled) {
+    function setScrolled(scrolled: boolean) {
       // toggle a compact class instead of manipulating many classes
       navbar.classList.toggle('navbar--compact', scrolled);
     }
@@ -161,7 +172,7 @@ import MenuIcon from './icons/Menu.astro';
     window.addEventListener('scroll', onScroll);
     onScroll();
 
-    function scrollToHref(href) {
+    function scrollToHref(href: string | null) {
       if (!href) return;
       const el = document.querySelector(href);
       el && el.scrollIntoView({ behavior: 'smooth' });
@@ -184,12 +195,14 @@ import MenuIcon from './icons/Menu.astro';
         mobileMenu.classList.remove('hidden');
         // prevent body scroll when open
         document.body.style.overflow = 'hidden';
+        mobileToggle.setAttribute('aria-expanded', 'true');
         // change icon to X
         mobileMenuIcon.innerHTML =
           '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
       } else {
         mobileMenu.classList.add('hidden');
         document.body.style.overflow = '';
+        mobileToggle.setAttribute('aria-expanded', 'false');
         // change icon to menu
         mobileMenuIcon.innerHTML =
           '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
