@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "plataforma-auditoria-interna",
+    "title": "Plataforma de auditoría interna",
+    "description": "Solución integral para digitalizar las auditorías internas de una franquicia murciana: planificación periódica, cuestionarios condicionados por local, puntuaciones ponderadas, evidencias fotográficas, firma y generación de informes PDF.",
+    "technologies": [
+      "Symfony",
+      "MySQL",
+      "API REST",
+      "Generación PDF"
+    ],
+    "image": "/proyectos/auditoria-interna.svg"
+  },
+  {
+    "slug": "alta-productos",
+    "title": "Plataforma de alta de productos",
+    "description": "Aplicación móvil y panel de administración para registrar productos mediante código EAN, capturar y comprimir varias fotografías, validar la información y gestionar el catálogo desde un flujo centralizado.",
+    "technologies": [
+      "Flutter",
+      "Node.js",
+      "Prisma",
+      "MySQL"
+    ],
+    "image": "/proyectos/alta-productos.svg"
+  }
+]
